@@ -1,0 +1,108 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-image: url('bg.jpg');
+  background-size: cover;          /* Makes the image cover the entire background */
+  background-position: center;     /* Centers the image */
+  background-repeat: no-repeat;    /* Prevents repeating */
+  background-attachment: fixed;    /* Keeps the background fixed when scrolling (optional) */
+  margin: 0;
+  padding: 1rem;
+  color: #ffffff;
+  height: 100vh;                   /* Makes the body take up the full height of the viewport */
+}
+
+
+
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  background: #ffffff;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 1.2rem;
+  color: #4a148c;
+  font-size: 1.5rem;
+}
+
+.grid-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.input-box {
+  background: linear-gradient(145deg, #eceff1, #cfd8dc);
+  border-radius: 10px;
+  padding: 0.7rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.input-box:hover {
+  transform: translateY(-2px);
+}
+
+.input-box label {
+  font-weight: 600;
+  color: #1a237e;
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+  display: block;
+}
+
+.input-box input,
+.input-box select {
+  padding: 0.4rem;
+  font-size: 0.9rem;
+  border: 1px solid #90a4ae;
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: #263238;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.submit-btn {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+button {
+  background: linear-gradient(to right, #00695c, #1de9b6);
+  color: white;
+  padding: 0.6rem 2rem;
+  font-size: 0.95rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+  transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background: linear-gradient(to right, #004d40, #00e676);
+  transform: translateY(-1px);
+}
+
+.result-positive {
+  color: #2e7d32;
+  font-weight: bold;
+  font-size: 1.3rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.result-negative {
+  color: #c62828;
+  font-weight: bold;
+  font-size: 1.3rem;
+  text-align: center;
+  margin-top: 1rem;
+}
