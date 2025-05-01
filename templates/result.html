@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Prediction Result</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h2>Prediction Result</h2>
+    <p class="{{ 'result-positive' if prediction == 'Low Risk (No Heart Disease)' else 'result-negative' }}">
+      {{ prediction }}
+    </p>
+    <div class="full-width"><a href="/">← Go Back</a></div>
+  </div>
+</body>
+</html>
