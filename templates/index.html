@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Heart Disease Predictor</title>
+  <title>ML4Heart</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
   <div class="container">
-    <h2>Heart Disease Prediction</h2>
+    <h2>ML4Heart - Heart Disease Prediction</h2>
     <form action="/predict" method="post" class="grid-form">
       
       <div class="input-box">
@@ -79,7 +79,7 @@
       </div>
 
       <div class="input-box">
-        <label>Slope</label>
+        <label>Slope of ST Segment</label>
         <select name="slope" required>
           <option value="0">Upsloping</option>
           <option value="1">Flat</option>
@@ -88,13 +88,14 @@
       </div>
 
       <div class="input-box">
-        <label>Major Vessels (0–3)</label>
-        <input type="number" name="ca" min="0" max="3" required>
+        <label>Number of Major Vessels (0–4)</label>
+        <input type="number" name="ca" min="0" max="4" required>
       </div>
 
       <div class="input-box">
         <label>Thalassemia</label>
         <select name="thal" required>
+          <option value="0">Unknown</option>
           <option value="1">Normal</option>
           <option value="2">Fixed Defect</option>
           <option value="3">Reversible Defect</option>

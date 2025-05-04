@@ -8,8 +8,12 @@
 <body>
   <div class="container">
     <h2>Prediction Result</h2>
-    <p class="{{ 'result-positive' if prediction == 'Low Risk (No Heart Disease)' else 'result-negative' }}">
-      {{ prediction }}
+    <p class="{{ 'result-negative' if prediction == 1 else 'result-positive' }}">
+      {% if prediction == 1 %}
+        🔴 High Risk: The patient is likely to have heart disease.
+      {% else %}
+        🟢 Low Risk: The patient is not likely to have heart disease.
+      {% endif %}
     </p>
     <div class="full-width"><a href="/">← Go Back</a></div>
   </div>
